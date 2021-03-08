@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Test/PersonalOrganizer.Test.csproj": {}
+    "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Test/PersonalOrganizer.Test.csproj": {}
   },
   "projects": {
-    "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj": {
+    "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj",
+        "projectUniqueName": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj",
         "projectName": "PersonalOrganizer.Domain",
-        "projectPath": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj",
+        "projectPath": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj",
         "packagesPath": "/Users/lenny/.nuget/packages/",
-        "outputPath": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/",
+        "outputPath": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -75,14 +75,14 @@
         }
       }
     },
-    "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Test/PersonalOrganizer.Test.csproj": {
+    "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Test/PersonalOrganizer.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Test/PersonalOrganizer.Test.csproj",
+        "projectUniqueName": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Test/PersonalOrganizer.Test.csproj",
         "projectName": "PersonalOrganizer.Test",
-        "projectPath": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Test/PersonalOrganizer.Test.csproj",
+        "projectPath": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Test/PersonalOrganizer.Test.csproj",
         "packagesPath": "/Users/lenny/.nuget/packages/",
-        "outputPath": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Test/obj/",
+        "outputPath": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Test/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -100,8 +100,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj": {
-                "projectPath": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj"
+              "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj": {
+                "projectPath": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj"
               }
             }
           }

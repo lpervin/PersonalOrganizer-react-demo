@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8B1KzaHB3ok1l/kEatVEX6h6dFesdKBzLZxdUeY9/Qcq15odgzDUjRAJxhxfgSZPSIAMeOUKhUSiwqOQEdmVuQ==",
+  "dgSpecHash": "GJl/wOv9M0CagG0DbyOZFTFqxhB0DLI/0+RYWkc8YJVUAm65Nd7WMhfTl78A7UFeUbPnY3APcNRrh9dQhBaJgQ==",
   "success": true,
-  "projectFilePath": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Test/PersonalOrganizer.Test.csproj",
+  "projectFilePath": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Test/PersonalOrganizer.Test.csproj",
   "expectedPackageFiles": [
     "/Users/lenny/.nuget/packages/coverlet.collector/1.3.0/coverlet.collector.1.3.0.nupkg.sha512",
     "/Users/lenny/.nuget/packages/microsoft.codecoverage/16.7.1/microsoft.codecoverage.16.7.1.nupkg.sha512",

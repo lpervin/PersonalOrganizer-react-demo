@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qRMrBxlc52SUpmVlktUbhbM0BET6X6gvfK64hYUmSL5cL6Gng+pqIlvqUYgWlWw7xm0J3rdu+Bwsbsb6ghkv/g==",
+  "dgSpecHash": "YT3S79O/lGgCE4dHZ11VXnYfDhzI6NjIuAIndVbQCuFl29U/ktHzBoNlo+l3oIFomCv4lIAJ1IFGGKxrhSO8JQ==",
   "success": true,
-  "projectFilePath": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj",
+  "projectFilePath": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj",
   "expectedPackageFiles": [
     "/Users/lenny/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/lenny/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",

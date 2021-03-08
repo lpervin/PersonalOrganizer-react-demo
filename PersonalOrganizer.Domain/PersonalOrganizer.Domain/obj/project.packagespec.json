@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj",
+    "projectUniqueName": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj",
     "projectName": "PersonalOrganizer.Domain",
-    "projectPath": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj",
-    "outputPath": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/",
+    "projectPath": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Domain/PersonalOrganizer.Domain.csproj",
+    "outputPath": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

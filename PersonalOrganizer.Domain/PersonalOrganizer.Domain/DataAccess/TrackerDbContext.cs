@@ -16,8 +16,8 @@ namespace PersonalOrganizer.Domain.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured) /*45.33.76.137*/
-                optionsBuilder.UseNpgsql("Host=localhost;Database=tracker;Username=dbuser;Password=Russell86");
+            if (!optionsBuilder.IsConfigured) 
+                optionsBuilder.UseNpgsql("");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

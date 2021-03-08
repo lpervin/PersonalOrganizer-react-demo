@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cK3qJaXYKmbcbpJNpuaTT4uMbpGXuaNyg9lYBoFCbvA7PLtUTIvCv/bYp8YVl7e1oUzExQjt0Bb4QL/IUNF0Gw==",
+  "dgSpecHash": "fE38iPSlvJ3NmlKFX2G+/SR7GbDGz9L/qEelKFW6GVxF2CxdlIWDDRgDl7luYd4Vq5673LaGwfbUW4J2+QMMpQ==",
   "success": true,
-  "projectFilePath": "/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.WebApi/PersonalOrganizer.WebApi.csproj",
+  "projectFilePath": "/Users/lenny/Dev/Playground/VPS/PersonalOrganizer-react-demo/PersonalOrganizer.Domain/PersonalOrganizer.WebApi/PersonalOrganizer.WebApi.csproj",
   "expectedPackageFiles": [
     "/Users/lenny/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/5.0.0/microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "/Users/lenny/.nuget/packages/microsoft.aspnetcore.authentication.openidconnect/5.0.0/microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
