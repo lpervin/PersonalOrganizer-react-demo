@@ -1,0 +1,15 @@
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/bin/Debug/net5.0/PersonalOrganizer.Domain.deps.json
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/bin/Debug/net5.0/PersonalOrganizer.Domain.dll
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/bin/Debug/net5.0/ref/PersonalOrganizer.Domain.dll
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/bin/Debug/net5.0/PersonalOrganizer.Domain.pdb
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/Debug/net5.0/PersonalOrganizer.Domain.csprojAssemblyReference.cache
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/Debug/net5.0/PersonalOrganizer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/Debug/net5.0/PersonalOrganizer.Domain.AssemblyInfoInputs.cache
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/Debug/net5.0/PersonalOrganizer.Domain.AssemblyInfo.cs
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/Debug/net5.0/PersonalOrganizer.Domain.csproj.CoreCompileInputs.cache
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/Debug/net5.0/PersonalOrganizer.Domain.dll
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/Debug/net5.0/ref/PersonalOrganizer.Domain.dll
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/Debug/net5.0/PersonalOrganizer.Domain.pdb
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/bin/Debug/net5.0/PersonalOrganizer.Domain.runtimeconfig.json
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/bin/Debug/net5.0/PersonalOrganizer.Domain.runtimeconfig.dev.json
+/Users/lenny/Dev/Playground/VPS/MobXToDoApp/PersonalOrganizer.Domain/PersonalOrganizer.Domain/obj/Debug/net5.0/PersonalOrganizer.Domain.genruntimeconfig.cache
