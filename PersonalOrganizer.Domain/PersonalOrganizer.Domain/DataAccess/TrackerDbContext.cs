@@ -17,7 +17,7 @@ namespace PersonalOrganizer.Domain.DataAccess
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured) 
-                optionsBuilder.UseNpgsql("");
+                optionsBuilder.UseNpgsql("Host=localhost;Database=tracker;Username=dbuser;Password=");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -29,6 +29,10 @@ namespace PersonalOrganizer.Domain.DataAccess
 
             modelBuilder.Entity<ToDo>()
                 .Property(t => t.Id)
+                .ValueGeneratedOnAdd();
+            
+            modelBuilder.Entity<AppUser>()
+                .Property(p => p.Id)
                 .ValueGeneratedOnAdd();
 
             modelBuilder.Entity<ToDo>()
@@ -42,5 +46,7 @@ namespace PersonalOrganizer.Domain.DataAccess
 
         public DbSet<Note> Notes { get; set; }
         public DbSet<ToDo> ToDos { get; set; }
+        
+        public DbSet<AppUser> AppUsers { get; set; }
     }
 }

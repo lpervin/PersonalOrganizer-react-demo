@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PersonalOrganizer.Domain.DataAccess;
@@ -9,9 +10,10 @@ using PersonalOrganizer.Domain.DataAccess;
 namespace PersonalOrganizer.Domain.Migrations
 {
     [DbContext(typeof(TrackerDbContext))]
-    partial class TrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20210324231452_AddAppUser")]
+    partial class AddAppUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,9 +49,6 @@ namespace PersonalOrganizer.Domain.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<long?>("AppUserId")
-                        .HasColumnType("bigint");
-
                     b.Property<DateTime>("NoteDate")
                         .HasColumnType("timestamp without time zone");
 
@@ -57,8 +56,6 @@ namespace PersonalOrganizer.Domain.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("NoteId");
-
-                    b.HasIndex("AppUserId");
 
                     b.ToTable("Notes");
                 });
@@ -69,9 +66,6 @@ namespace PersonalOrganizer.Domain.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<long?>("AppUserId")
-                        .HasColumnType("bigint");
 
                     b.Property<DateTime?>("DateCompleted")
                         .HasColumnType("timestamp without time zone");
@@ -87,60 +81,37 @@ namespace PersonalOrganizer.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AppUserId");
-
                     b.ToTable("ToDos");
 
                     b.HasData(
                         new
                         {
                             Id = 1L,
-                            DateCreated = new DateTime(2021, 3, 24, 19, 30, 19, 444, DateTimeKind.Local).AddTicks(7090),
+                            DateCreated = new DateTime(2021, 3, 24, 19, 14, 52, 278, DateTimeKind.Local).AddTicks(9320),
                             Description = "Feed the dog",
                             IsCompleted = false
                         },
                         new
                         {
                             Id = 2L,
-                            DateCreated = new DateTime(2021, 3, 24, 19, 30, 19, 457, DateTimeKind.Local).AddTicks(5120),
+                            DateCreated = new DateTime(2021, 3, 24, 19, 14, 52, 291, DateTimeKind.Local).AddTicks(5660),
                             Description = "Feed the cat",
                             IsCompleted = false
                         },
                         new
                         {
                             Id = 3L,
-                            DateCreated = new DateTime(2021, 3, 24, 19, 30, 19, 457, DateTimeKind.Local).AddTicks(5150),
+                            DateCreated = new DateTime(2021, 3, 24, 19, 14, 52, 291, DateTimeKind.Local).AddTicks(5690),
                             Description = "Walk the dog",
                             IsCompleted = false
                         },
                         new
                         {
                             Id = 4L,
-                            DateCreated = new DateTime(2021, 3, 24, 19, 30, 19, 457, DateTimeKind.Local).AddTicks(5150),
+                            DateCreated = new DateTime(2021, 3, 24, 19, 14, 52, 291, DateTimeKind.Local).AddTicks(5700),
                             Description = "Change cat litter",
                             IsCompleted = false
                         });
-                });
-
-            modelBuilder.Entity("PersonalOrganizer.Domain.Models.Note", b =>
-                {
-                    b.HasOne("PersonalOrganizer.Domain.Models.AppUser", null)
-                        .WithMany("UserNotes")
-                        .HasForeignKey("AppUserId");
-                });
-
-            modelBuilder.Entity("PersonalOrganizer.Domain.Models.ToDo", b =>
-                {
-                    b.HasOne("PersonalOrganizer.Domain.Models.AppUser", null)
-                        .WithMany("UserToDos")
-                        .HasForeignKey("AppUserId");
-                });
-
-            modelBuilder.Entity("PersonalOrganizer.Domain.Models.AppUser", b =>
-                {
-                    b.Navigation("UserNotes");
-
-                    b.Navigation("UserToDos");
                 });
 #pragma warning restore 612, 618
         }

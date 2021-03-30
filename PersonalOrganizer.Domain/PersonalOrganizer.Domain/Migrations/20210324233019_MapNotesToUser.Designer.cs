@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PersonalOrganizer.Domain.DataAccess;
@@ -9,9 +10,10 @@ using PersonalOrganizer.Domain.DataAccess;
 namespace PersonalOrganizer.Domain.Migrations
 {
     [DbContext(typeof(TrackerDbContext))]
-    partial class TrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20210324233019_MapNotesToUser")]
+    partial class MapNotesToUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
