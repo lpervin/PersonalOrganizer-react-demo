@@ -1,17 +1,17 @@
 
 import { observer } from "mobx-react-lite";
+import { useContext } from "react";
 import { Badge, Nav, Navbar } from 'react-bootstrap';
 
 import {ImHome} from 'react-icons/im';
 import {Link} from "react-router-dom";
-import AuthNav from '../components/common/nav/auth-nav';
+import { RootStoreContext } from "../stores/RootStore";
 
-// import LoginButton from '../components/common/login-button';
-// import LogoutButton from '../components/common/logout-button';
+const NavBar = observer( () => {
 
-export default function NavBar() {
-
-   // console.log(isAuthenticated);
+    const store = useContext(RootStoreContext);  
+    const noteStore = store.notesStore;
+    const todoStore = store.todosStore;
     const selectedPath = window.location.pathname==='/' ? '/home' : window.location.pathname;
    // console.log(window.location.pathname);
     return (<Navbar bg="primary" variant="dark" sticky="top">
@@ -20,6 +20,12 @@ export default function NavBar() {
                     <Nav.Link href="/home">My ToDos</Nav.Link>
                     <Nav.Link href="/notes">My Notes</Nav.Link>             
                 </Nav>      
-                <AuthNav/>                       
+                <Navbar.Text>
+                        # of Tasks: <Link to='/notes'>{todoStore.totalTodosCount()}</Link>
+                        # of Complted Tasks: <Link to='/notes'>{todoStore.completedTodosCount()}</Link>
+                        # of Notes: <Link to='/notes'>{noteStore.notesCount()}</Link>
+                </Navbar.Text>                      
             </Navbar>);
-};
+});
+
+export default NavBar;

@@ -2,8 +2,7 @@ import NavBar from './NavBar';
 import NotesView from './NotesView';
 import ToDosView from './ToDosView';
 import React from 'react';
-import Auth0ProviderWithHistory from "../auth/auth0-provider-with-history"; 
-import ProtectedRoute from "../auth/protected-route";
+
 
 
 import {
@@ -18,19 +17,21 @@ const  Layout = () => {
     //console.log(process.env.REACT_APP_API_URL);
     return (<React.Fragment>  
             <Router>      
-            <Auth0ProviderWithHistory>            
+                   
                 <NavBar></NavBar>
                     <div className="app-content">
                         <Switch>
-                            <ProtectedRoute path="/home" component={ToDosView}></ProtectedRoute>
-                            <ProtectedRoute path="/notes" component={NotesView}></ProtectedRoute>
-                            <ProtectedRoute path="/todos" component={ToDosView}></ProtectedRoute>
+                        <Route path="/home">
+                                <ToDosView />
+                            </Route>
+                            <Route path="/notes">
+                                <NotesView/>
+                            </Route>
                             <Route path="/">
                                 <ToDosView />
                             </Route>
                         </Switch>                        
-                    </div>  
-                    </Auth0ProviderWithHistory>         
+                    </div>                      
               </Router> 
               {/* <footer className="text-muted">{window.location.hostname}</footer>                   */}
          </React.Fragment>  );
