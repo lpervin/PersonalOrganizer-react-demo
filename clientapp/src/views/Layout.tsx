@@ -4,7 +4,7 @@ import ToDosView from './ToDosView';
 import React from 'react';
 import Auth0ProviderWithHistory from "../auth/auth0-provider-with-history"; 
 import ProtectedRoute from "../auth/protected-route";
-import Home from './Home';
+
 
 import {
     BrowserRouter as Router,
@@ -22,12 +22,11 @@ const  Layout = () => {
                 <NavBar></NavBar>
                     <div className="app-content">
                         <Switch>
-                            
-                            <ProtectedRoute path="/home" component={Home}></ProtectedRoute>
+                            <ProtectedRoute path="/home" component={ToDosView}></ProtectedRoute>
                             <ProtectedRoute path="/notes" component={NotesView}></ProtectedRoute>
                             <ProtectedRoute path="/todos" component={ToDosView}></ProtectedRoute>
                             <Route path="/">
-                                <Home />
+                                <ToDosView />
                             </Route>
                         </Switch>                        
                     </div>  
