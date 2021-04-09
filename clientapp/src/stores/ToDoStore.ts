@@ -12,7 +12,7 @@ export class ToDoStore
          this.initToDos();
     }
 
-    async initToDos(){
+    async initToDos(){             
         const todosData = await ToDosApi.list();
        // console.log(todosData);
         runInAction(()=> {
