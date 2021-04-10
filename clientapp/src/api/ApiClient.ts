@@ -2,6 +2,18 @@ import axios, { AxiosResponse } from 'axios';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
+axios.interceptors.request.use(
+        (config) => {
+          const token = window.localStorage.getItem('jwt');
+          console.log('token', token);
+          if (token) config.headers.Authorization = `Bearer ${token}`;
+          return config;
+        },
+        error => {
+          return Promise.reject(error);
+        }
+ );
+
 const responseBody = (response: AxiosResponse) => response.data;
 
 const requests = {
@@ -9,7 +21,7 @@ const requests = {
     axios
       .get(url)
       .then(responseBody),
-  post: (url: string, body: {}) =>
+  post: (url: string, body?: {}|null) =>
     axios
       .post(url, body)
       .then(responseBody),

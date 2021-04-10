@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PersonalOrganizer.Domain.Models;
 using PersonalOrganizer.Domain.Repos.Notes;
+using PersonalOrganizer.WebApi.Auth;
 
 namespace PersonalOrganizer.WebApi.Controllers
 {
@@ -17,36 +19,40 @@ namespace PersonalOrganizer.WebApi.Controllers
             _inotes = notesRepo;
         }
         
-        //get all
         [HttpGet]
+        [Authorize]
+        [ConfirmApplicationUser]
         public async Task<List<Note>> GetAllNotes()
         {
-            return await _inotes.GetAllNotes();
+            var uid = User.Identity.Name;
+            return await _inotes.GetAllNotes(uid);
         }
         
-        //get by id
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<Note> GetById(int id)
         {
             return await _inotes.GetNoteById(id);
         }
         
-        //Add
         [HttpPost]
+        [Authorize]/*TODO: add policy to check if user owns this item*/
         public async Task<Note> AddNew(Note newNote)
         {
-            return await _inotes.AddNote(newNote);
+            var uid = User.Identity?.Name;
+            return await _inotes.AddNote(newNote, uid);
         }
         
-        //Update
         [HttpPut]
+        [Authorize]/*TODO: add policy to check if user owns this item*/
         public async Task Update(Note note)
         {
-             await _inotes.UpdateNote(note);
+            var uid = User.Identity?.Name;
+             await _inotes.UpdateNote(note,uid);
         }
         
-        //Delete
         [HttpDelete("{id}")]
+        [Authorize]/*TODO: add policy to check if user owns this item*/
         public async Task Delete(int id)
         {
             await _inotes.DeleteNote(id);

@@ -2,15 +2,25 @@ import React from 'react';
 import { useContext } from 'react';
 import { observer } from "mobx-react-lite";
 import {RootStoreContext} from "../../stores/RootStore";
-import { Button, Table } from 'react-bootstrap';
+import { Button, Spinner, Table } from 'react-bootstrap';
 import {BsCheckCircle} from 'react-icons/bs'
 import {TiDeleteOutline} from 'react-icons/ti'
+import { AuthenticationContext } from '../../stores/UserAuthStore';
 import ToDo from '../../models/ToDo';
+import Loading from '../common/Loading';
 
 const ToDosList = observer( () => {
 
     const rootStore = useContext(RootStoreContext);   
     const todoStore = rootStore.todosStore;
+    const authContext = useContext(AuthenticationContext);
+
+    if (!authContext.isUserAuthenticated)
+    {
+        return <Loading/>;
+    }
+
+
     const todos = todoStore.getAllToDos();
     const handleDelete = async (id:number) => {
                 await todoStore.Delete(id);
@@ -23,6 +33,11 @@ const ToDosList = observer( () => {
         await todoStore.updateToDo(todo);
     }
     return (<React.Fragment>
+
+            {(todos==null) ? (<Spinner animation="border" role="status">
+            <span className="sr-only">Loading...</span>
+            </Spinner>) : <></> }
+
                   <Table responsive>
                         <tbody>                              
                                 {todos?.map((t) => (

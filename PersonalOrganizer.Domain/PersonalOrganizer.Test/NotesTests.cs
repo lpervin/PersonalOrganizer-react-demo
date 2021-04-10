@@ -8,19 +8,28 @@ using Xunit;
 
 namespace PersonalOrganizer.Test
 {
-    public class UnitTest1
+    public class NotesTests
     {
 
        [Fact]
         public void CanGetAllFromRepo()
         {
                 var repo = new NotesRepository(new TrackerDbContext());
-                var allNotes = repo.GetAllNotes().Result;
+                var allNotes = repo.GetAllNotes("auth0|6071b3b0fa89ef00695d29a6").Result;
                 Assert.NotNull(allNotes);
                 Assert.NotEmpty(allNotes);
         }
-
+        
         [Fact]
+        public void CanGetAllInvalidUserFromRepo()
+        {
+            var repo = new NotesRepository(new TrackerDbContext());
+            var allNotes = repo.GetAllNotes("fake").Result;
+            Assert.NotNull(allNotes);
+            Assert.Empty(allNotes);
+        }
+
+        /*[Fact]
         public void CanAddNew()
         {
             var repo = new NotesRepository(new TrackerDbContext());
@@ -53,7 +62,7 @@ namespace PersonalOrganizer.Test
             repo.DeleteNote(43).Wait();
             var newNote = repo.GetNoteById(10).Result;
             Assert.Null(newNote);
-        }
+        }*/
 
 
 

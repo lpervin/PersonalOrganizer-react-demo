@@ -8,7 +8,7 @@ export class NotesStore
     notes?:Note[];
     constructor(){
         makeAutoObservable(this);
-        this.initNotes();
+      //  this.initNotes();
     }
 
     async initNotes()
@@ -23,7 +23,7 @@ export class NotesStore
         //.finally(()=> { setIsLoading(false); })
     }
 
-  @action  getAllNotes(){
+  @action getAllNotes(){
         return this.notes;
     }
 

@@ -22,6 +22,9 @@ const AddToDoForm = observer(()=>
 
     const handleSubmit = (e: React.SyntheticEvent) => {
             e.preventDefault();
+            if (todoText.trim().length==0)
+                return;
+                
             todoStore.AddToDo({ description: todoText, isCompleted: isCompleted,
                                 dateCreated: new Date(),
                                 dateCompleted: isCompleted ? new Date() : null

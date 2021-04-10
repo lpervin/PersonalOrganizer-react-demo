@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace PersonalOrganizer.Domain.Models
 {
@@ -8,6 +9,9 @@ namespace PersonalOrganizer.Domain.Models
         public string NoteText { get; set; }
         
         public long? AppUserId { get; set; }
+        
+        [JsonIgnore]
+        public virtual AppUser User { get; set; }
         public DateTime NoteDate { get; set; }
     }
 }

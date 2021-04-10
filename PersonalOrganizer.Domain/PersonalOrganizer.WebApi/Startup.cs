@@ -19,6 +19,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using PersonalOrganizer.Domain.DataAccess;
+using PersonalOrganizer.Domain.Models;
 using PersonalOrganizer.Domain.Repos.Notes;
 using PersonalOrganizer.WebApi.Auth;
 
@@ -41,13 +42,14 @@ namespace PersonalOrganizer.WebApi
             services.Configure<DataBaseSettings>(Configuration.GetSection(nameof(DataBaseSettings)));
             var dataBaseSettings =
                 services.BuildServiceProvider().GetRequiredService<IOptions<DataBaseSettings>>().Value;
-            var connectionString =dataBaseSettings.PgConnectionString();
+            var connectionString = dataBaseSettings.PgConnectionString();
             
             services.AddDbContext<TrackerDbContext>(options => options.UseNpgsql(connectionString));
             
             //add repos 
             services.AddScoped<INotes, NotesRepository>();
             services.AddScoped<IToDo, ToDoRepository>();
+            services.AddTransient<IAppUser, AppUserRepository>();
             
             services.AddControllers();
             services.AddSwaggerGen(c =>

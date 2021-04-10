@@ -1,10 +1,10 @@
 
-import { observable, action, autorun, makeAutoObservable } from 'mobx';
+import { action, autorun, makeAutoObservable, computed } from 'mobx';
 import { createContext } from "react";
 import UserProfile from '../models/UserProfile';
 
 
-export default class UserStore
+export default class UserAuthStore
 {
    
     userProfile?: UserProfile | null;
@@ -12,9 +12,16 @@ export default class UserStore
     constructor(){
         makeAutoObservable(this);        
     }    
+    
+    @computed isUserAuthenticated(){
+        return this.userProfile!=null;
+    }
 
-    @action getUser(){
-            return window.localStorage.getItem('user');
+    @action getUserId(){
+            if (this.userProfile==null)
+                return null;
+
+            return this.userProfile.sub;
     };
 
 
@@ -23,7 +30,7 @@ export default class UserStore
     };
 }
 
-const userStore = new UserStore();
+const userStore = new UserAuthStore();
 
 autorun(async () => {
     
@@ -31,7 +38,9 @@ autorun(async () => {
     {
            // const user = {name: userStore.userProfile.name!, email: userStore.userProfile.email!};
             // console.log('Add this token to Store', userStore.userProfile.accessToken);
-            // console.log('Add this user to Store', userStore.userProfile.sub);
+            
+            //console.log('Add this user sub to Store', userStore.userProfile.sub);
+            //console.log('Add JWT');    
             window.localStorage.setItem('user', JSON.stringify(userStore.userProfile!));
             window.localStorage.setItem('jwt', userStore.userProfile.accessToken!);
     }
@@ -42,4 +51,4 @@ autorun(async () => {
     }    
 });
 
-export const UserStoreContext = createContext(userStore);
+export const AuthenticationContext = createContext(userStore);

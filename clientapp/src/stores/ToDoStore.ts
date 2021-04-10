@@ -9,7 +9,7 @@ export class ToDoStore
     
     constructor() {
          makeAutoObservable(this);
-         this.initToDos();
+    //     this.initToDos();
     }
 
     async initToDos(){             

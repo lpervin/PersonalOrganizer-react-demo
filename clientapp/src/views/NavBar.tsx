@@ -6,8 +6,6 @@ import {ImHome} from 'react-icons/im';
 import {Link} from "react-router-dom";
 import AuthNav from '../components/common/nav/auth-nav';
 
-// import LoginButton from '../components/common/login-button';
-// import LogoutButton from '../components/common/logout-button';
 
 export default function NavBar() {
 

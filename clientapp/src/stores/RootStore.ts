@@ -9,10 +9,15 @@ export class RootStore
 {
     notesStore: NotesStore;
     todosStore: ToDosStore;
-
+    
     constructor(){
         this.notesStore = new NotesStore();
         this.todosStore = new ToDosStore();
+    }
+
+    async Init(){
+       await this.notesStore.initNotes();
+       await this.todosStore.initToDos()
     }
 }
 

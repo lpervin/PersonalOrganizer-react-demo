@@ -15,6 +15,9 @@ const AddNote = observer( () => {
 
         const handleSubmit = (e: React.SyntheticEvent) => {
             e.preventDefault();
+            if (noteText.trim().length==0)
+                return;
+                
             noteStore?.addNote(noteText);
             SetNoteText('');
         };

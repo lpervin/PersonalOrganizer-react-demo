@@ -1,9 +1,9 @@
-import axios from 'axios';
+
 import Note from '../models/Note';
-import {requests, responseBody} from './ApiClient'
+import {requests} from './ApiClient'
 
 const NotesApi = { //params: URLSearchParams
-    list: (): Promise<Note[]> => axios.get('/notes').then(responseBody),
+    list: (): Promise<Note[]> => requests.get('/notes'),
 
     details: (id: string) => requests.get(`/notes/${id}`),
 

@@ -4,12 +4,20 @@ import { observer } from "mobx-react-lite";
 import { Button, Card, Spinner } from 'react-bootstrap';
 import {RootStoreContext} from "../../stores/RootStore";
 import Note from "../../models/Note";
+import { AuthenticationContext } from "../../stores/UserAuthStore";
+import Loading from "../common/Loading";
 
 const NotesList = observer( () => {
 
     const rootStore = useContext(RootStoreContext);   
     const noteStore = rootStore.notesStore;
     const [editNoteText, setEditdNoteText] = useState('' as string);
+    const authContext = useContext(AuthenticationContext);
+
+    if (!authContext.isUserAuthenticated)
+    {
+        return <Loading/>;
+    }
 
     const notes = noteStore?.getAllNotes();
 
@@ -50,11 +58,10 @@ const NotesList = observer( () => {
         toggleEditMode(selectedNote);        
     };
 
-    return (<div>
-        
-        {(notes && notes.length>0) || (<Spinner animation="border" role="status">
+    return (<div>        
+        { notes==null ? (<Spinner animation="border" role="status">
   <span className="sr-only">Loading...</span>
-</Spinner>) }
+</Spinner>) : <></> }
 
             {notes?.map(n => 
                 (<Card key={n.noteId}>
